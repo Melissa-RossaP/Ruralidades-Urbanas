@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Fazendo o header */
+header {
+    display: flex; /* Usando Flexbox */
+    justify-content: space-between; /* Espaça os itens dentro do header */
+    align-items: center; /* Alinha verticalmente no centro */
+    width: 100%; /* Largura igual ao tamanho da tela */
+    height: 20vh; /* Altura igual ao tamanho da tela */
+    padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
+    background-color:rgb(128, 187, 112); /* Cor de fundo do header */
+    color: rgb(23, 68, 11); /* Cor do texto */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+  }
+  
+  /* Centralizando o h1 */
+  header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    margin: 0; /* Remove a margem padrão */
+    text-align: center;
+    flex-grow: 1; /* O h1 ocupa o espaço restante */
+  }
+  
+/* Estilizando a navegação */
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens em linha */
+    flex-direction: column; /* Agora os itens estarão em coluna */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px; /* Espaço entre os itens */
+  }
+  
+  nav ul li a {
+    color: rgb(29, 75, 25);
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(18, 49, 15); /* Cor ao passar o mouse */
+  }
+
+  /* RESPONSIVIDADE PARA TELAS MENORES */
+@media screen and (max-width: 768px) {
+
+    /* Header em coluna e com menos altura */
+    header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 5px 0;
+    }
+  
+    /* Deixa o carrossel e outras seções principais empilhadas */
+    .carrossel,
+    .Reserva,
+    .umuarama-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .texto,
+    .brasao,
+    .Texto-umu,
+    .imagem-umuarama {
+      width: 90%;
+      text-align: center;
+    }
+  
+    .imagem-umuarama img,
+    .brasao img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    h2, h3 {
+      font-size: 1em;
+    }
+  }
+  
