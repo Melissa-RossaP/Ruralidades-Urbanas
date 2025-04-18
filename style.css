@@ -15,18 +15,20 @@ header {
     height: 20vh; /* Altura igual ao tamanho da tela */
     padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
     background-color: rgb(128, 187, 112); /* Cor de fundo do header */
-    color: rgb(23, 68, 11); /* Cor do texto */
+    color: rgb(24, 66, 12); /* Cor do texto */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
     gap: 400px; /* Diminui o espaço entre os itens */
+    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
   }
   
   /* Centralizando o h1 */
   header h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.5em;
+    font-size: 2.4em;
     margin: 0; /* Remove a margem padrão */
     text-align: center; /* Centraliza o texto dentro do h1 */
-   
+    border: 2px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    
   }
   
 
@@ -38,6 +40,8 @@ header {
   
   .Agrinho img {
     height: 15vh;
+    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    border-radius: 5px; /* Bordas arredondadas  */
   }
   
 /* Estilizando a navegação */
@@ -54,14 +58,20 @@ nav ul {
   }
   
   nav ul li a {
-    color: rgb(29, 75, 25);
+    color: rgb(29, 75, 25); /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
     font-size: 1em;
-  }
-  
-  nav ul li a:hover {
-    color: rgb(18, 49, 15); /* Cor ao passar o mouse */
-  }
+    padding: 3px 6px; /* Espaçamento interno ao redor do texto */
+    background-color: rgb(81, 156, 74); /* Preenche o fundo com a mesma cor da borda */
+    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    border-radius: 5px; /* Bordas arredondadas  */
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    background-color: rgb(58, 119, 51); /* Cor de fundo ao passar o mouse */
+    border-color: rgb(52, 78, 50); /* Cor da borda ao passar o mouse */
+}
 
   /* RESPONSIVIDADE PARA TELAS MENORES */
 @media screen and (max-width: 768px) {
