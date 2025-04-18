@@ -66,14 +66,25 @@ nav ul {
   /* RESPONSIVIDADE PARA TELAS MENORES */
 @media screen and (max-width: 768px) {
 
-    /* Header em coluna e com menos altura */
-    header {
+   /* Responsividade adicional para telas menores */
+@media screen and (max-width: 768px) {
+  header {
       flex-direction: column;
       height: auto;
       padding: 10px;
       text-align: center;
-    }
-  
+      gap: 20px; /* Ajuste o gap aqui também */
+  }
+
+  .Agrinho {
+      justify-content: center; /* Centraliza os itens */
+      gap: 10px; /* Diminui ainda mais o espaço entre os itens */
+  }
+
+  .Agrinho img {
+      max-height: 8vh; /* Menor altura da imagem em telas pequenas */
+  }
+}
     nav ul {
       flex-direction: column;
       align-items: center;
