@@ -9,23 +9,35 @@ body {
 /* Fazendo o header */
 header {
     display: flex; /* Usando Flexbox */
-    justify-content: space-between; /* Espaça os itens dentro do header */
+    justify-content: center; /* Centraliza os itens horizontalmente */
     align-items: center; /* Alinha verticalmente no centro */
     width: 100%; /* Largura igual ao tamanho da tela */
     height: 20vh; /* Altura igual ao tamanho da tela */
     padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
-    background-color:rgb(128, 187, 112); /* Cor de fundo do header */
+    background-color: rgb(128, 187, 112); /* Cor de fundo do header */
     color: rgb(23, 68, 11); /* Cor do texto */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+    gap: 400px; /* Diminui o espaço entre os itens */
   }
   
   /* Centralizando o h1 */
   header h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
     margin: 0; /* Remove a margem padrão */
-    text-align: center;
-    flex-grow: 1; /* O h1 ocupa o espaço restante */
+    text-align: center; /* Centraliza o texto dentro do h1 */
+   
+  }
+  
+
+  .Agrinho {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .Agrinho img {
+    height: 15vh;
   }
   
 /* Estilizando a navegação */
