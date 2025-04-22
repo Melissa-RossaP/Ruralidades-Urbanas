@@ -1,34 +1,40 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     background-color: #f4f4f4;
     line-height: 1.6;
 }
 
+.Meio{
+  padding: 30px;
+}
+
 /* Fazendo o header */
 header {
-    display: flex; /* Usando Flexbox */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Alinha verticalmente no centro */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza os itens  */
+    align-items: center; /* Alinha no centro */
     width: 100%; /* Largura igual ao tamanho da tela */
     height: 20vh; /* Altura igual ao tamanho da tela */
     padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
     background-color: rgb(128, 187, 112); /* Cor de fundo do header */
     color: rgb(24, 66, 12); /* Cor do texto */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
-    gap: 400px; /* Diminui o espaço entre os itens */
-    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    gap: 400px; /* espaço entre os itens */
+    border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
   }
   
   /* Centralizando o h1 */
   header h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.4em;
-    margin: 0; /* Remove a margem padrão */
+    font-size: 2em;
+    margin: 1; 
     text-align: center; /* Centraliza o texto dentro do h1 */
-    border: 2px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    
+    border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    word-wrap: break-word; /* Quebra de palavras */
+    max-width: calc(100% - 40px); /* Garante que o h1 não ultrapasse a largura do header */
   }
   
 
@@ -44,7 +50,6 @@ header {
     border-radius: 5px; /* Bordas arredondadas  */
   }
   
-/* Estilizando a navegação */
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     display: flex; /* Alinha os itens em linha */
@@ -62,9 +67,9 @@ nav ul {
     text-decoration: none; /* Remove o sublinhado */
     font-size: 1em;
     padding: 3px 6px; /* Espaçamento interno ao redor do texto */
-    background-color: rgb(81, 156, 74); /* Preenche o fundo com a mesma cor da borda */
+    background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
     border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    border-radius: 5px; /* Bordas arredondadas  */
+    border-radius: 5px; /* Bordas meio redonda  */
 }
 
 /* Efeito ao passar o mouse */
@@ -76,16 +81,20 @@ nav ul li a:hover {
 
 .carrossel {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+  gap: 40px;
   justify-content: center;
-  margin: 30px 0;
+  margin: 10px 10px; /* adiciona margem lateral */
   overflow: hidden;
 }
 
 .item {
   position: relative;
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  max-width: 200px; /* mantém tamanho máximo */
+  aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .item img {
@@ -104,91 +113,152 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(184, 224, 199, 0.8);
+  border-radius: 10px;
   color: #16380e;
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
+  padding: 0.5px; /* evita que o texto encoste nas bordas */
+}
+
+a {
+  color: #16380e;
+  font-weight: bold;
+  font-size: 1em;  
+  margin-top: 1px; /* separa do texto acima */
 }
 
 .item input:checked ~ .texto {
   opacity: 1;
   pointer-events: auto;
 }
+
 .item input {
   display: none;
 }
 
-  /* RESPONSIVIDADE PARA TELAS MENORES */
-@media screen and (max-width: 768px) {
 
-   /* Responsividade adicional para telas menores */
+
+.Reserva {
+  background-color: rgb(128, 187, 112);
+  color: rgb(24, 66, 12); /* Cor do texto */
+  gap: 20px;
+  border: 3px solid rgb(74, 141, 67); 
+  overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
+  text-align: left;
+  display: flex; /* Flexbox para dividir o conteúdo */
+  justify-content: space-between; /* Espalha os itens de forma que fiquem nas extremidades */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+
+
+.ReservaTexto {
+  display: flex; /* Flexbox para o texto e brasão */
+  justify-content: space-between; /* espaço entre o texto e o brasão */
+  width: 100%; /* Garantir que ocupe toda a largura disponível */
+}
+
+
+.brasao {
+  margin-left: auto; /* Empurra o brasão - direita */
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column; /* Empilha os itens (brasão em cima e texto embaixo) */
+  justify-content: center; /* Alinha - centro */
+  align-items: center; /* Centraliza */
+}
+
+.brasao p {
+  margin: 0; /* Remove qualquer margem do parágrafo */
+  text-align: center; /* Alinha */
+  font-size: 0.8em;
+}
+
+
+
+ /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
+
+
 @media screen and (max-width: 768px) {
   header {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
-      text-align: center;
-      gap: 20px; /* Ajuste o gap aqui também */
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    gap: 20px;
   }
 
   .Agrinho {
-      justify-content: center; /* Centraliza os itens */
-      gap: 10px; /* Diminui ainda mais o espaço entre os itens */
+    justify-content: center;
+    gap: 10px;
   }
 
   .Agrinho img {
-      max-height: 8vh; /* Menor altura da imagem em telas pequenas */
+    max-height: 8vh;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .carrossel,
+  .Reserva,
+  .umuarama-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto,
+  .brasao,
+  .Texto-umu,
+  .imagem-umuarama {
+    width: 90%;
+    text-align: center;
+  }
+
+  .imagem-umuarama img,
+  .brasao img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2, h3 {
+    font-size: 1em;
+  }
+
+  .carrossel {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 90%;
+    margin-bottom: 20px;
   }
 }
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 5px 0;
-    }
-  
-    /* Deixa o carrossel e outras seções principais empilhadas */
-    .carrossel,
-    .Reserva,
-    .umuarama-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .texto,
-    .brasao,
-    .Texto-umu,
-    .imagem-umuarama {
-      width: 90%;
-      text-align: center;
-    }
-  
-    .imagem-umuarama img,
-    .brasao img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    h2, h3 {
-      font-size: 1em;
-   
-    }
 
-    .carrossel {
-      flex-direction: column;
-    }
-    .item {
-      width: 90%;
-      margin-bottom: 20px;
-    }
-
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
   }
-  
-  
+
+  .Agrinho img {
+    max-height: 7vh;
+  }
+
+  .carrossel img {
+    max-width: 100%;
+  }
+}
