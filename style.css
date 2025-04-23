@@ -167,7 +167,7 @@ a {
 }
 
 
-.brasao img {
+.brasao {
   margin-left: auto; /* Empurra o brasão - direita */
   margin-top: 2px;
   margin-bottom: 2px;
@@ -175,7 +175,11 @@ a {
   flex-direction: column; /* Empilha os itens (brasão em cima e texto embaixo) */
   justify-content: center; /* Alinha - centro */
   align-items: center; /* Centraliza */
+}
+
+.brasao img{
   border-radius: 5px;
+ display: block;
 }
 
 .brasao p {
