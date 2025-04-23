@@ -188,6 +188,17 @@ a {
   font-size: 0.8em;
 }
 
+.tecnologia {
+  text-align: center;
+  font-size: 2em;
+  color: #16380e;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #4a7740; /* reforça a cor */
+  text-decoration-style: solid;
+}
+
 
 
  /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
