@@ -84,7 +84,7 @@ nav ul li a:hover {
   flex-wrap: wrap; /* permite quebrar linha em telas menores */
   gap: 40px;
   justify-content: center;
-  margin: 10px 10px; /* adiciona margem lateral */
+  margin: 30px 20px; /* adiciona margem lateral */
   overflow: hidden;
 }
 
@@ -95,25 +95,25 @@ nav ul li a:hover {
   aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
   flex-shrink: 0;
   overflow: hidden;
+  border-radius: 10px;
+
 }
 
 .item img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
 }
 
 .texto {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;    
   width: 100%;
   height: 100%;
   background-color: rgba(184, 224, 199, 0.8);
-  border-radius: 10px;
   color: #16380e;
   display: flex;
   flex-direction: column; 
@@ -123,7 +123,8 @@ nav ul li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
-  padding: 0.5px; /* evita que o texto encoste nas bordas */
+  padding: 1px; /* evita que o texto encoste nas bordas */
+  border-radius: 10px;
 }
 
 a {
@@ -147,15 +148,15 @@ a {
 .Reserva {
   background-color: rgb(128, 187, 112);
   color: rgb(24, 66, 12); /* Cor do texto */
-  gap: 20px;
+  gap: 10px;
   border: 3px solid rgb(74, 141, 67); 
   overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
   text-align: left;
   display: flex; /* Flexbox para dividir o conteúdo */
   justify-content: space-between; /* Espalha os itens de forma que fiquem nas extremidades */
   align-items: center; /* Alinha os itens verticalmente no centro */
+  padding: 10px;
 }
-
 
 
 .ReservaTexto {
