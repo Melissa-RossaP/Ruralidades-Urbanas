@@ -201,9 +201,10 @@ a {
 
 .TecTexto{
 font-size: 1.5em;
-border:#2b4725;
-background-color: #4a7740;
+border:#4a7740;
 border-radius: 2px;
+text-align: center;
+
 }
 
 
