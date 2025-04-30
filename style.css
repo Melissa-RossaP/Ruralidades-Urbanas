@@ -218,7 +218,7 @@ a {
   align-items: center; /* Centraliza */
 }
 .brasao img{
-  border-radius: 5px;
+  border-radius: 10px;
  display: block;
  border: 3px solid rgb(84, 128, 79);
 }
@@ -262,12 +262,143 @@ a {
 }
 
 
-.Reserva, .Umuarama {
+.Carreta{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(184, 224, 173);
+  color: rgb(24, 66, 12); /* Cor do texto */
+  gap: 10px;
+  border: 3px solid rgb(163, 212, 158); 
+  border-radius: 10px;
+  padding: 15px;
+  gap: 20px;
+  flex-wrap: nowrap; /* Não deixar quebrar linha */
+}
+
+.CarTexto{
+  width: 100%;
+}
+
+.ImgCar{
+  width: 20%;
+  text-align: center;
+}
+
+.ImgCar Img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid rgb(84, 128, 79);
+}
+
+.Car-Legenda{
+  font-size: 0.6em;
+  margin-top: 1px;
+}
+
+.Curitiba{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(184, 224, 173);
+  color: rgb(24, 66, 12); /* Cor do texto */
+  gap: 10px;
+  border: 3px solid rgb(163, 212, 158); 
+  border-radius: 10px;
+  padding: 15px;
+  gap: 20px;
+  flex-wrap: nowrap; /* Não deixar quebrar linha */
+}
+
+.CuritibaTexto{
+  width: 100%;
+}
+
+.ImgCuri{
+  width: 20%;
+  text-align: center;
+}
+
+.ImgCuri Img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid rgb(84, 128, 79);
+}
+
+.Curi-Legenda{
+  font-size: 0.6em;
+  margin-top: 1px;
+}
+
+
+.Reserva, .Umuarama, .Carreta, .Curitiba{
   margin-bottom: 20px; /* Espaço entre os blocos */
 }
 
 
 
+
+.FooterCon {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar linha */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 20vh;
+  padding: 0 20px;
+  background-color: rgb(128, 187, 112);
+  color: rgb(24, 66, 12);
+  box-sizing: border-box;
+  gap: 40px; /* Menor gap para responsividade */
+  border: 3px solid rgb(74, 141, 67);
+  overflow: hidden;
+  text-align: center;
+}
+
+.Ops {
+  font-size: 10px;
+}
+
+.Eba {
+  font-size: 25px;
+}
+
+.contatos {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.contatos img {
+  width: 35px;
+  height: auto;
+}
+
+/* RESPONSIVIDADE: Ajustes para telas menores ou com zoom */
+@media (max-width: 768px), (max-zoom: 1.1) {
+  .FooterCon {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Eba {
+    font-size: 20px;
+  }
+
+  .contatos img {
+    width: 30px;
+  }
+}
 
 
  /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
@@ -302,7 +433,7 @@ a {
 
   .carrossel,
   .Reserva,
-  .umuarama-container {
+  .Umuarama, .Carreta, .Curitiba{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -310,14 +441,15 @@ a {
 
   .texto,
   .brasao,
-  .Texto-umu,
-  .imagem-umuarama {
+  .Umu-img,
+  .Umu-texto,
+  .CarTexto{
     width: 100%;
     text-align: center;
   }
 
-  .imagem-umuarama img,
-  .brasao img {
+  .Umu-img img,
+  .brasao img, .ImgCar, .ImgCuri{
     max-width: 100%;
     height: auto;
   }
@@ -350,7 +482,7 @@ a {
   }
 }
 
-/* Responsivo: imagem embaixo do texto em telas menores */
+
 @media (max-width: 768px) {
   .Umuarama {
     flex-direction: column;
@@ -363,3 +495,25 @@ a {
   }
 }
 
+
+@media (max-width: 768px), (max-zoom: 1.1) {
+  .FooterCon {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Eba {
+    font-size: 20px;
+  }
+
+  .contatos img {
+    width: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .FooterCon {
+    gap: 60px;
+  }
+}
