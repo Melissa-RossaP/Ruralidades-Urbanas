@@ -10,6 +10,17 @@ body {
   padding: 30px;
 }
 
+.introdução{
+  color: #122e05;
+  size: 3em;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
 /* Fazendo o header */
 header {
     display: flex; /* Flexbox */
@@ -145,11 +156,46 @@ a {
 
 
 
+
+
+.tecnologia {
+  text-align: center;
+  font-size: 2em;
+  color: #0e2538;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #414077; /* reforça a cor */
+  text-decoration-style: solid;
+}
+
+.TecTexto{
+  overflow: hidden;
+  text-align: center;
+  color: #061d30;
+  background-color: #d1e2e9;
+  border: 3px solid #b9cbd6;
+  border-radius: 10px;
+  font-size: 1em; 
+}
+
+.TecExemplos{
+  text-align: center;
+  font-size: 1.5em;
+  color: #0e3821;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #497740; /* reforça a cor */
+  text-decoration-style: solid;
+
+}
+
 .Reserva {
-  background-color: rgb(128, 187, 112);
+  background-color: rgb(184, 224, 173);
   color: rgb(24, 66, 12); /* Cor do texto */
   gap: 10px;
-  border: 3px solid rgb(74, 141, 67); 
+  border: 3px solid rgb(163, 212, 158); 
   overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
   text-align: left;
   display: flex; /* Flexbox para dividir o conteúdo */
@@ -180,6 +226,7 @@ a {
 .brasao img{
   border-radius: 5px;
  display: block;
+ border: 3px solid rgb(84, 128, 79);
 }
 
 .brasao p {
@@ -188,28 +235,46 @@ a {
   font-size: 0.8em;
 }
 
-.tecnologia {
+.Umuarama {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(184, 224, 173);
+  color: rgb(24, 66, 12); /* Cor do texto */
+  gap: 10px;
+  border: 3px solid rgb(163, 212, 158); 
+  border-radius: 10px;
+  padding: 15px;
+  gap: 20px;
+  flex-wrap: nowrap; /* Não deixar quebrar linha */
+}
+
+.Umu-texto {
+  width: 100%;
+}
+
+.Umu-img {
+  width: 20%;
   text-align: center;
-  font-size: 2em;
-  color: #16380e;
-  font-family: 'Times New Roman', Times, serif;
-  text-decoration: underline;
-  text-decoration-thickness: 2px; /* destaque maior */
-  text-decoration-color: #4a7740; /* reforça a cor */
-  text-decoration-style: solid;
+  
 }
 
-.TecTexto {  
-font-size: 1.5em;
-border-color:#6ea7b7;
-border-radius: 2px;
-border: #456c8a;
-text-align: center;
-text-decoration: #315571;
-
+.Umu-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid rgb(84, 128, 79);
 }
 
+.Umu-legenda {
+  font-size: 0.6em;
+  margin-top: 1px;
+}
 
+.Reserva, .Umuarama {
+  margin-bottom: 20px; /* Espaço entre os blocos */
+}
 
  /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
 
@@ -290,3 +355,17 @@ text-decoration: #315571;
     max-width: 100%;
   }
 }
+
+/* Responsivo: imagem embaixo do texto em telas menores */
+@media (max-width: 768px) {
+  .Umuarama {
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .Umu-texto,
+  .Umu-img {
+    width: 100%;
+  }
+}
+
