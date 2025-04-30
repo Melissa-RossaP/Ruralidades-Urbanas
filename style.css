@@ -49,6 +49,8 @@ header {
   }
   
 
+
+/* Agrinho + Nav do Sobre e contato */
   .Agrinho {
     display: flex;
     align-items: center;
@@ -83,12 +85,14 @@ nav ul {
     border-radius: 5px; /* Bordas meio redonda  */
 }
 
-/* Efeito ao passar o mouse */
 nav ul li a:hover {
     background-color: rgb(58, 119, 51); /* Cor de fundo ao passar o mouse */
     border-color: rgb(52, 78, 50); /* Cor da borda ao passar o mouse */
 }
 
+
+
+/*Carrossel*/
 
 .carrossel {
   display: flex;
@@ -98,7 +102,6 @@ nav ul li a:hover {
   margin: 30px 20px; /* adiciona margem lateral */
   overflow: hidden;
 }
-
 .item {
   position: relative;
   width: 100%;
@@ -109,7 +112,6 @@ nav ul li a:hover {
   border-radius: 10px;
 
 }
-
 .item img {
   width: 100%;
   height: 100%;
@@ -118,7 +120,6 @@ nav ul li a:hover {
   transition: all 0.3s ease;
   display: block;
 }
-
 .texto {
   position: absolute;
   top: 0;
@@ -137,26 +138,22 @@ nav ul li a:hover {
   transition: opacity 0.6s ease;
   padding: 1px; /* evita que o texto encoste nas bordas */
 }
-
 a {
   color: #16380e;
   font-weight: bold;
   font-size: 1em;  
   margin-top: 1px; /* separa do texto acima */
 }
-
 .item input:checked ~ .texto {
   opacity: 1;
   pointer-events: auto;
 }
-
 .item input {
   display: none;
 }
 
 
-
-
+/*Tecnologia mini Título + o Texto */
 
 .tecnologia {
   text-align: center;
@@ -168,7 +165,6 @@ a {
   text-decoration-color: #414077; /* reforça a cor */
   text-decoration-style: solid;
 }
-
 .TecTexto{
   overflow: hidden;
   text-align: center;
@@ -178,6 +174,9 @@ a {
   border-radius: 10px;
   font-size: 1em; 
 }
+
+
+/*Agora os Exemplos*/
 
 .TecExemplos{
   text-align: center;
@@ -204,15 +203,11 @@ a {
   padding: 10px;
   border-radius: 10px;
 }
-
-
 .ReservaTexto {
   display: flex; /* Flexbox para o texto e brasão */
   justify-content: space-between; /* espaço entre o texto e o brasão */
   width: 100%; /* Garantir que ocupe toda a largura disponível */
 }
-
-
 .brasao {
   margin-left: auto; /* Empurra o brasão - direita */
   margin-top: 2px;
@@ -222,13 +217,11 @@ a {
   justify-content: center; /* Alinha - centro */
   align-items: center; /* Centraliza */
 }
-
 .brasao img{
   border-radius: 5px;
  display: block;
  border: 3px solid rgb(84, 128, 79);
 }
-
 .brasao p {
   margin: 0; /* Remove qualquer margem do parágrafo */
   text-align: center; /* Alinha */
@@ -249,32 +242,33 @@ a {
   gap: 20px;
   flex-wrap: nowrap; /* Não deixar quebrar linha */
 }
-
 .Umu-texto {
   width: 100%;
 }
-
 .Umu-img {
   width: 20%;
   text-align: center;
   
 }
-
 .Umu-img img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   border: 3px solid rgb(84, 128, 79);
 }
-
 .Umu-legenda {
   font-size: 0.6em;
   margin-top: 1px;
 }
 
+
 .Reserva, .Umuarama {
   margin-bottom: 20px; /* Espaço entre os blocos */
 }
+
+
+
+
 
  /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
 
