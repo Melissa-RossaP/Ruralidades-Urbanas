@@ -2,8 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0px;
-    background-color: #f4f4f4;
+    background-color: #dcf5c0;
     line-height: 1.6;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
 }
 
 .Meio{
@@ -35,6 +37,7 @@ header {
     gap: 400px; /* espaço entre os itens */
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   }
   
   /* Centralizando o h1 */
@@ -101,6 +104,7 @@ nav ul li a:hover {
   justify-content: center;
   margin: 30px 20px; /* adiciona margem lateral */
   overflow: hidden;
+ 
 }
 .item {
   position: relative;
@@ -110,7 +114,7 @@ nav ul li a:hover {
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
-
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 .item img {
   width: 100%;
@@ -137,6 +141,7 @@ nav ul li a:hover {
   pointer-events: none;
   transition: opacity 0.6s ease;
   padding: 1px; /* evita que o texto encoste nas bordas */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 a {
   color: #16380e;
@@ -173,6 +178,7 @@ a {
   border: 3px solid #b9cbd6;
   border-radius: 10px;
   font-size: 1em; 
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -188,6 +194,7 @@ a {
   text-decoration-color: #497740; /* reforça a cor */
   text-decoration-style: solid;
 
+
 }
 
 .Reserva {
@@ -202,6 +209,7 @@ a {
   align-items: center; /* Alinha os itens verticalmente no centro */
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 .ReservaTexto {
   display: flex; /* Flexbox para o texto e brasão */
@@ -241,6 +249,7 @@ a {
   padding: 15px;
   gap: 20px;
   flex-wrap: nowrap; /* Não deixar quebrar linha */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 .Umu-texto {
   width: 100%;
@@ -275,6 +284,7 @@ a {
   padding: 15px;
   gap: 20px;
   flex-wrap: nowrap; /* Não deixar quebrar linha */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .CarTexto{
@@ -311,6 +321,7 @@ a {
   padding: 15px;
   gap: 20px;
   flex-wrap: nowrap; /* Não deixar quebrar linha */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .CuritibaTexto{
@@ -338,6 +349,72 @@ a {
 .Reserva, .Umuarama, .Carreta, .Curitiba{
   margin-bottom: 20px; /* Espaço entre os blocos */
 }
+
+/* Estilo da linha do tempo */
+
+.Titu{
+  text-align: center;
+  font-size: 2em;
+  color: #0e3812;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #597740; /* reforça a cor */
+  text-decoration-style: solid;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 800px;
+  padding: 10px;
+  
+}
+
+
+/* Estilo para os eventos da linha do tempo */
+.evento {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+
+
+/* Estilo para o ano */
+.ano {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #16360a;
+  margin-right: 20px;
+  z-index: 1; /*sobrepo*/
+}
+
+/* Estilo da descrição dos eventos (quadradinhos) */
+.descrição {
+  background-color: #aaf1ad;
+  padding: 20px;
+  border-radius: 5px;
+  border: #16380e solid 3px;
+  width: 60%;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.descrição h3 {
+  font-size: 1.3em;
+  color: #143a0f;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.descrição p {
+  font-size: 1em;
+  color: #194210;
+}
+
 
 
 
@@ -384,6 +461,8 @@ a {
 }
 
 /* RESPONSIVIDADE: Ajustes para telas menores ou com zoom */
+
+
 @media (max-width: 768px), (max-zoom: 1.1) {
   .FooterCon {
     flex-direction: column;
@@ -399,10 +478,6 @@ a {
     width: 30px;
   }
 }
-
-
- /* --> RESPONSIVIDADE PARA TELAS MENORES <--*/ 
-
 
 @media screen and (max-width: 768px) {
   header {
@@ -449,7 +524,8 @@ a {
   }
 
   .Umu-img img,
-  .brasao img, .ImgCar, .ImgCuri{
+  .brasao img, .ImgCar, .ImgCuri
+  .ImgCar img, .ImgCuri img{
     max-width: 100%;
     height: auto;
   }
@@ -517,3 +593,47 @@ a {
     gap: 60px;
   }
 }
+
+@media (max-width: 768px) {
+  .Carreta, .Curitiba, .Reserva {
+    flex-direction: column;
+    text-align: justify;
+  }
+
+ .brasao .ReservaTexto, .ImgCar, .ImgCuri, .CuritibaTexto .CarTexto{
+    width: 90%;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .evento {
+    flex-direction: column; /* Coloca os itens em uma coluna em vez de uma linha */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .ano {
+    margin-right: 0;
+    margin-bottom: 10px; /* Dá um espaço entre o ano e a descrição */
+  }
+
+  .descricao {
+    width: 90%; /* Ajusta a largura da descrição para ocupar mais espaço */
+  }
+}
+
+@media (max-width: 480px) {
+  .Titu {
+    font-size: 1.5em; /* Diminui o tamanho do título em telas menores */
+  }
+
+  .ano {
+    font-size: 1.2em; /* Ajusta o tamanho da fonte do ano */
+  }
+
+  .descricao {
+    padding: 15px; /* Diminui o padding da descrição em telas pequenas */
+  }
+}
+
+
