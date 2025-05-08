@@ -4,8 +4,8 @@ body {
     padding: 0px;
     background-color: #dcf5c0;
     line-height: 1.6;
-    justify-content: center; /* centraliza horizontalmente */
     align-items: center;     /* centraliza verticalmente */
+    
 }
 
 .Meio{
