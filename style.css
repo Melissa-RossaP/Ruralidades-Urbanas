@@ -26,6 +26,8 @@ body {
 /* Fazendo o header */
 header {
     display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza os itens  */
+    align-items: center; /* Alinha no centro */
     width: 100%; /* Largura igual ao tamanho da tela */
     height: 20vh; /* Altura igual ao tamanho da tela */
     padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
@@ -39,8 +41,6 @@ header {
   
   /* Centralizando o h1 */
   header h1 {
-    justify-content: center; /* Centraliza os itens  */
-    align-items: center; /* Alinha no centro */
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     margin: 1; 
@@ -73,6 +73,7 @@ nav ul {
     background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
     border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     border-radius: 5px; /* Bordas meio redonda  */
+    margin-left: 100px;
 }
 
 nav ul li a:hover {
