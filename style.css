@@ -34,9 +34,10 @@ header {
     background-color: rgb(128, 187, 112); /* Cor de fundo do header */
     color: rgb(24, 66, 12); /* Cor do texto */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+    gap: 400px; /* espaço entre os itens */
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
-    gap: 12em;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   }
   
   /* Centralizando o h1 */
@@ -57,7 +58,6 @@ nav ul {
     flex-direction: column; /* Agora os itens estarão em coluna */
     margin: 0;
     padding: 0;
-    margin-left: auto;
   }
   
   nav ul li {
@@ -72,7 +72,6 @@ nav ul {
     background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
     border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     border-radius: 5px; /* Bordas meio redonda  */
-    margin-left: 600px;
 }
 
 nav ul li a:hover {
