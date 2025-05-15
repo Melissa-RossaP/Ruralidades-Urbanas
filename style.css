@@ -48,7 +48,6 @@ header {
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     word-wrap: break-word; /* Quebra de palavras */
     max-width: calc(100% - 40px); /* Garante que o h1 não ultrapasse a largura do header */
-   margin-right: 300px;
   }
   
   
