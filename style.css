@@ -51,20 +51,6 @@ header {
     max-width: calc(100% - 40px); /* Garante que o h1 não ultrapasse a largura do header */
   }
   
-
-
-/* Agrinho + Nav do Sobre e contato */
-  .Agrinho {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .Agrinho img {
-    height: 15vh;
-    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    border-radius: 5px; /* Bordas arredondadas  */
-  }
   
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
@@ -579,9 +565,6 @@ a {
     padding: 10px;
   }
 
-  .Eba {
-    font-size: 20px;
-  }
 
   .contatos img {
     width: 30px;
