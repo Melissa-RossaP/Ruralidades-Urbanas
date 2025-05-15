@@ -26,8 +26,6 @@ body {
 /* Fazendo o header */
 header {
     display: flex; /* Flexbox */
-    justify-content: center; /* Centraliza os itens  */
-    align-items: center; /* Alinha no centro */
     width: 100%; /* Largura igual ao tamanho da tela */
     height: 20vh; /* Altura igual ao tamanho da tela */
     padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
