@@ -59,6 +59,7 @@ nav ul {
     flex-direction: column; /* Agora os itens estarão em coluna */
     margin: 0;
     padding: 0;
+    margin-left: auto;
   }
   
   nav ul li {
