@@ -39,6 +39,8 @@ header {
   
   /* Centralizando o h1 */
   header h1 {
+    justify-content: center; /* Centraliza os itens  */
+    align-items: center; /* Alinha no centro */
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     margin: 1; 
