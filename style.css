@@ -73,7 +73,7 @@ nav ul {
     background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
     border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     border-radius: 5px; /* Bordas meio redonda  */
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 nav ul li a:hover {
