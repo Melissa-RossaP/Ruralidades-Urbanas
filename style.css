@@ -40,7 +40,7 @@ header {
   }
   
   /* Centralizando o h1 */
-  h1 {
+  .rural {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     margin-right: 100px; 
